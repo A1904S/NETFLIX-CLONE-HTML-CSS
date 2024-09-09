@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url(bg2.jpg);
+  height: 100vh;
+  position: relative;
+  background-position: center center;
+  background-size: max(1200px, 100vw);
+  background-repeat: repeat;
+}
+
+.main .box {
+  height: 100vh;
+  width: 100%;
+  opacity: 0.69;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  max-width: 80vw;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+
+}
+
+nav img {
+  color: red;
+  position: relative;
+  z-index: 10;
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  font-family: "Martel Sans", sans-serif;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  gap: 23px;
+  padding: 0 30px;
+}
+
+.hero> :nth-child(1) {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.hero> :nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hero> :nth-child(3) {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.seperation {
+  width: 100%;
+  height: 28px;
+  border: solid 4px #57c70d;
+  border-color: red transparent transparent transparent;
+  border-radius: 200%/75px 75px 0 0;
+  position: relative;
+  bottom: 68px;
+  box-shadow: inset 0 8px 18px -10px #1b49e0;
+}
+
+.btn {
+  padding: 3px 8px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+}
+
+.btn-red {
+  background: rgb(229, 9, 20);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 19px;
+  font-weight: bold;
+  border-radius: 0.3em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em rgb(229, 9, 20);
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  font-family: "Martel Sans", sans-serif;
+}
+ 
+@media only screen  and (max-width: 600px){
+  .btn-red {
+    font-size: 14px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+}
+
+
+.btn-red .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.3em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em rgb(229, 9, 20);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.btn-red:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.btn-red .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: rgb(229, 9, 20);
+}
+
+.btn-red:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.btn-red:active .icon {
+  transform: scale(0.95);
+}
+
+
+.main input {
+  padding: 20px 200px 20px 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.7);
+  border: 1px solid rgb(255, 255, 255, 0.4);
+
+}
+
+.lang {
+  background-color: rgba(23, 23, 23, 0.2);
+  color: white;
+}
+
+.button {
+  background-image: linear-gradient(to right bottom, red, red, red, red, red);
+  border: none;
+  font-size: 17px;
+  border-radius: 0;
+  padding: 4px;
+  transition: border-top-left-radius 0.1s ease-in,
+    border-top-right-radius 0.1s ease-in 0.15s,
+    border-bottom-right-radius 0.1s ease-in 0.3s,
+    border-bottom-left-radius 0.1s ease-in 0.45s,
+    padding 0.1s ease-in;
+  position: relative;
+}
+
+.button__int {
+  background-color: red;
+  color: white;
+  border-radius: 0;
+  padding: 0px 10px;
+  transition: all 0.1s ease-in,
+    border-top-left-radius 0.1s ease-in,
+    border-top-right-radius 0.1s ease-in 0.15s,
+    border-bottom-right-radius 0.1s ease-in 0.1s,
+    border-bottom-left-radius 0.1s ease-in 0.15s,
+    padding 0.1s ease-in;
+  font-weight: 600;
+  z-index: -1;
+
+}
+
+.button:active .button__int {
+  padding: 10px 30px;
+}
+
+.button:hover {
+  border-radius: 1.5em;
+  cursor: pointer;
+}
+
+.button:hover .button__int {
+  border-radius: 1.3em;
+}
+
+.button:hover .button__int {
+  box-shadow: -15px -10px 30px -5px rgba(255, 0, 0, 0.8),
+    15px -10px 30px -5px rgba(255, 0, 0, 0.8),
+    15px 10px 30px -5px rgba(255, 0, 0, 0.8),
+    -15px 10px 30px -5px rgb(255, 1, 1);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+
+.heading {
+  color: white;
+  position: absolute;
+  left: 200px;
+  font-family: "Martel Sans", sans-serif;
+}
+
+.btn-option {
+  padding-top: 0.5rem;
+  padding-right: calc(2.25rem + 0rem);
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  font-weight: bold;
+  background-color: rgba(23, 23, 23, 0.7);
+  color: white;
+  border: 1px solid rgba(129, 127, 127, 0.7);
+  font-family: Montserrat;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+  margin: 83px 163px 0px 163px;
+}
+
+.wrapper section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 20px 0;
+}
+
+.wrapper section .item {
+  position: relative;
+  padding: 0 27px;
+  transition: transform 0.2s ease, margin 0.2s ease;
+}
+
+.wrapper section .item:hover {
+  margin: 0 20px;
+  transform: scale(1.1);
+}
+
+
+.arrow__btn {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  background: rgb(0, 0, 0);
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.left-arrow {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.right-arrow {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.number {
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  font-size: 100px;
+  position: relative;
+  right: 24px;
+  bottom: 120px;
+  color: #000000;
+  text-shadow: 0.25rem rgb(255, 255, 255);
+  -webkit-text-stroke: 0.25rem rgb(255, 255, 255);
+
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0px 100px;
+  gap: 23px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .card {
+    width: 100% !important;
+    margin: 20px  !important;
+  }
+}
+
+
+
+.card {
+
+  width: 243px;
+  height: 350px;
+  border-radius: 1rem;
+  background-color: #4158D0;
+  background-image: linear-gradient(315deg, #4e1d44 0%, #1c183e 46%, #2d2285 100%);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+.desk {
+  padding: 42px 18px;
+  color: white;
+  font-family: "Martel Sans", sans-serif;
+  line-height: 20px;
+}
+
+.desk h3 {
+  padding-bottom: 17px;
+  font-size: 20px;
+}
+
+.desk p {
+  color: rgb(169 169 169);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.about input[type="radio"] {
+  display: none;
+
+}
+
+.about {
+  margin: 60px 140px;
+}
+
+@media only screen  and (max-width: 600px){
+  .about{
+    margin: 10px;
+  }
+}
+
+
+.about label {
+  display: block;
+  font-size: 23px;
+
+  color: #fffefe;
+  cursor: pointer;
+  background-color: rgb(48 47 47);
+  border: none;
+  font-family: "Martel Sans", sans-serif;
+  padding: 14px 35px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+.about label:hover {
+  background-color: rgb(81, 80, 80);
+}
+
+.about .content {
+  display: none;
+  padding: 10px;
+  border: none;
+  border-top: none;
+  background-color: rgb(48 47 47);
+  border-radius: 0 0 4px 4px;
+  color: white;
+}
+
+.about input[type="radio"]:checked+label+.content {
+  display: block;
+}
+
+
+::marker {
+  display: none;
+  color: rgba(8, 8, 8, 0.0);
+}
+
+.final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sign-in span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.sign-in input {
+  padding: 20px 350px 20px 20px;
+}
+
+.info {
+  height: 100%;
+  width: 150px;
+  border: none;
+  line-height: 30px;
+}
+
+.parent {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 80px 180px;
+  margin-left: 30px;
+  color: white;
+}
+
+.finall {
+
+  position: absolute;
+  left: 130px;
+}
+
+.last-btn {
+  padding: 10px;
+  background-color: rgba(129, 127, 127, 0.3);
+  color: white;
+}
+
+footer a {
+  text-decoration: underline;
+  color: grey;
+}
+
+.net {
+  color: grey;
+  margin: 40px 0px;
+
+  font-family: "Martel Sans", sans-serif;
+}
